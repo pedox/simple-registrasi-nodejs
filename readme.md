@@ -1,6 +1,6 @@
 # Simple registrasi form
 
-Artikel lengkap ![di sini](http://martabakang.us/form-registrasi-sederhana-dengan-nodejs-coffescript-angularjs-dan-bootstrap)
+Artikel lengkap [di sini](http://martabakang.us/form-registrasi-sederhana-dengan-nodejs-coffescript-angularjs-dan-bootstrap)
 
 ## Cara menggunakan
 
