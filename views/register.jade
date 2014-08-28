@@ -1,0 +1,33 @@
+extends layout
+
+block content
+	.container(ng-controller="registerCtrl")
+		.row
+			.col-md-8
+				h1 Register
+				p tak register maka tak sayang
+		.row
+			.col-md-4
+				form(method='post', ng-submit="register()" ng-if="!success")
+
+					.form-group(class="{{err.username ? 'has-error' : ''}}")
+						input.form-control(type='text', name='username', ng-model="input.username", placeholder='Username')
+						p.help-block {{err.username}}
+
+					.form-group(class="{{err.email ? 'has-error' : ''}}")
+						input.form-control(type='text', name='email', ng-model="input.email", placeholder='Email')
+						p.help-block {{err.email}}
+
+					.form-group(class="{{err.password ? 'has-error' : ''}}")
+						input.form-control(type='password', name='password', ng-model="input.password", placeholder='Password')
+						p.help-block {{err.password}}
+
+					.form-group(class="{{err.rePassword ? 'has-error' : ''}}")
+						input.form-control(type='password', name='rePassword', ng-model="input.rePassword", placeholder='Re Password')
+						p.help-block {{err.rePassword}}
+
+					.form-group
+						input.btn.btn-primary.btn-block(type='submit', value='Register' class="{{loading ? 'disabled' : ''}}")
+				.alert.alert-success(ng-if="success")
+					strong Berhasil
+					|  Kamu telah terdaftar
